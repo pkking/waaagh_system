@@ -14,5 +14,5 @@ before_script:
   - createuser -l blog
   - createdb test_blog -O blog
 script:
-  - make run
+  - nohup make run
   - make test

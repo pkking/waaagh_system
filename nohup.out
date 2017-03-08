@@ -1,0 +1,41 @@
+TYPE=DEVEL FLASK_APP=blog/__init__.py flask run
+/home/lcr/.virtualenvs/waaagh_system/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py:839: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Serving Flask app "blog"
+Traceback (most recent call last):
+  File "/home/lcr/.virtualenvs/waaagh_system/bin/flask", line 11, in <module>
+    sys.exit(main())
+  File "/home/lcr/.virtualenvs/waaagh_system/lib/python3.6/site-packages/flask/cli.py", line 507, in main
+    cli.main(args=args, prog_name=name)
+  File "/home/lcr/.virtualenvs/waaagh_system/lib/python3.6/site-packages/flask/cli.py", line 374, in main
+    return AppGroup.main(self, *args, **kwargs)
+  File "/home/lcr/.virtualenvs/waaagh_system/lib/python3.6/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/lcr/.virtualenvs/waaagh_system/lib/python3.6/site-packages/click/core.py", line 1066, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/lcr/.virtualenvs/waaagh_system/lib/python3.6/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/lcr/.virtualenvs/waaagh_system/lib/python3.6/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/lcr/.virtualenvs/waaagh_system/lib/python3.6/site-packages/click/decorators.py", line 64, in new_func
+    return ctx.invoke(f, obj, *args[1:], **kwargs)
+  File "/home/lcr/.virtualenvs/waaagh_system/lib/python3.6/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/lcr/.virtualenvs/waaagh_system/lib/python3.6/site-packages/flask/cli.py", line 432, in run_command
+    use_debugger=debugger, threaded=with_threads)
+  File "/home/lcr/.virtualenvs/waaagh_system/lib/python3.6/site-packages/werkzeug/serving.py", line 708, in run_simple
+    inner()
+  File "/home/lcr/.virtualenvs/waaagh_system/lib/python3.6/site-packages/werkzeug/serving.py", line 670, in inner
+    fd=fd)
+  File "/home/lcr/.virtualenvs/waaagh_system/lib/python3.6/site-packages/werkzeug/serving.py", line 564, in make_server
+    passthrough_errors, ssl_context, fd=fd)
+  File "/home/lcr/.virtualenvs/waaagh_system/lib/python3.6/site-packages/werkzeug/serving.py", line 476, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib64/python3.6/socketserver.py", line 453, in __init__
+    self.server_bind()
+  File "/usr/lib64/python3.6/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib64/python3.6/socketserver.py", line 467, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+make: *** [Makefile:23：run] 错误 1
