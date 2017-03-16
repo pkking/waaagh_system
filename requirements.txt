@@ -13,7 +13,9 @@ Mako==1.0.6
 MarkupSafe==1.0
 packaging==16.8
 psycopg2==2.7
+py==1.4.32
 pyparsing==2.2.0
+pytest==3.0.6
 python-dateutil==2.6.0
 python-editor==1.0.3
 pytz==2016.10

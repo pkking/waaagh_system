@@ -1,11 +1,11 @@
-#from sqlalchemy import create_engine, ForeignKey, Table
 from sqlalchemy.ext.declarative import declared_attr
-#from sqlalchemy.schema import Column
-#from sqlalchemy.types import Integer, String, Text, DateTime
-from flask_sqlalchemy import SQLAlchemy
 from flask_restful import abort
 import datetime
-from blog import db
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+
+db = SQLAlchemy()
+migrate = Migrate()
 
 class TableMixin(object):
     @declared_attr
@@ -101,5 +101,3 @@ class Tag(db.Model, TableMixin):
     created = db.Column(db.DateTime, default=datetime.datetime.now, nullable=False)
     posts = db.relationship('Post', secondary=association_table, order_by="Post.id", 
             backref=db.backref('tags', lazy='dynamic'))
-
-#db.create_all()

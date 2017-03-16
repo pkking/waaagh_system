@@ -1,8 +1,8 @@
-.PHONY: clean install help test run dependencies docs
+.PHONY: clean help test test-db run dependencies db
 
 help:
 	@echo "  clean      remove unwanted stuff"
-	@echo "  install    install dependencies"
+	@echo "  dependencies    install dependencies"
 	@echo "  test       run the testsuite"
 	@echo "  run        run the development server with the development config"
 	@echo "  db         init devel database"
@@ -19,17 +19,13 @@ clean:
 	find . -name '__pycache__' -exec rm -rf {} +
 
 db:migrations
-	TYPE=DEVEL FLASK_APP=blog/__init__.py flask db upgrade
+	TYPE=DEVEL FLASK_APP=start_blog.py flask db upgrade
 
 test-db:migrations
-	TYPE=TESTING FLASK_APP=blog/__init__.py flask db upgrade
+	TYPE=TESTING FLASK_APP=start_blog.py flask db upgrade
 
 test:
-	TYPE=TESTING FLASK_APP=blog/__init__.py python blog_tests.py
+	pytest
 
 run:
-	TYPE=DEVEL FLASK_APP=blog/__init__.py flask run
-
-install:dependencies
-	clear
-	flaskbb --config ./flaskbb.cfg install
+	TYPE=DEVEL FLASK_APP=start_blog.py flask run 

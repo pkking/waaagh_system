@@ -1,7 +1,8 @@
-#from flask import Flask, request
+from flask_restful import Api
 from flask_restful import reqparse, Api, Resource, fields, marshal_with
 from blog.models import Post, Tag, Persion
-from blog import api
+
+api = Api()
 
 post_fields = {
     'name': fields.String,

@@ -1,4 +1,0 @@
-2017-03-07 16:29:47,423 INFO: requesting /posts [in blog_tests.py:17]
-2017-03-07 16:29:47,429 INFO: got response: 
-404
-b'{\n    "message": "not any Post exist. You have requested this URI [/posts] but did you mean /posts or /posts/<int:blog_id> ?"\n}\n' [in blog_tests.py:20]

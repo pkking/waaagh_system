@@ -8,6 +8,7 @@ db_driver = "psycopg2"
 db_type = "postgresql"
 
 class Config(object):
+    LOGGING = True
     INFO_LOG = "info.log"
     ERROR_LOG = "error.log"
     DEBUG = False
@@ -24,9 +25,10 @@ class DevelopmentConfig(Config):
 
 class TestingConfig(Config):
     TESTING = True
+    LOGGING = False
     #DEBUG = True
-    INFO_LOG = "info-testing.log"
-    ERROR_LOG = "error-testing.log"
+    #INFO_LOG = "info-testing.log"
+    #ERROR_LOG = "error-testing.log"
     SQLALCHEMY_DATABASE_URI = "{}+{}://{}:{}@{}/{}".format(
     db_type, db_driver, db_user, db_password, db_host, db_test_name)
 
