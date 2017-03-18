@@ -1,0 +1,6 @@
+post_name = 'test_post'
+post_body = 'test post body.'
+persion_name = 'tester'
+persion_email = 'test@test.com'
+persion_pwd = 'testpwd'
+tag_name = 'test_tag'

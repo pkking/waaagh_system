@@ -31,7 +31,6 @@ class blogPosts(Resource):
         else:
             return Post.get_all()
 
-
 class blogPersions(Resource):
     @marshal_with(persion_fields)
     def get(self, persion_id=None):

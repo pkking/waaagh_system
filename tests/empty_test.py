@@ -1,7 +1,7 @@
 import pytest
 import json
 
-@pytest.mark.usefixtures("app")
+@pytest.mark.usefixtures("db")
 class TestEmptyResources:
     def test_empty_post(self):
         # all the resources should return 404
