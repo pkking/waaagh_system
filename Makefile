@@ -25,7 +25,7 @@ test-db:migrations
 	TYPE=TESTING FLASK_APP=start_blog.py flask db upgrade
 
 test:
-	pytest
+	pytest -v
 
 run:
 	TYPE=DEVEL FLASK_APP=start_blog.py flask run 
